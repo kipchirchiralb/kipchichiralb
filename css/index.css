@@ -163,7 +163,7 @@ header #titles {
 .dropdown-icon {
     position: fixed;
     bottom: 60px;
-    left: 20px;
+    left: 0;
     display: inline-block;
     cursor: pointer;
     padding: 10px;
@@ -172,7 +172,7 @@ header #titles {
 .bar1,
 .bar2,
 .bar3 {
-    width: 72px;
+    width: 60px;
     height: 16px;
     background-color: #082b03;
     margin: 6px 0;
@@ -297,7 +297,7 @@ form input {
     border: 0;
     border-bottom: 2px solid grey;
     margin: .5rem auto;
-    width: 90%;
+    width: 80%;
     background-color: #f0f8e2;
 }
 
