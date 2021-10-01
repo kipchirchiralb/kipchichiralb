@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;700&display=swap");
+
+/* || GENERAL STYLING  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #082b03;
+    margin: 0 auto;
+    overflow-x: hidden;
+    /* overflow: auto; */
+    /* background-color: yellowgreen; */
+    /* width: 100%; */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    width: 95%;
+    border-radius: 1rem;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    line-height: 150%;
+}
+
+
+/* || TYPOGRAPHY - TEXT STYLES AND COLORS */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+p {
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #148f04;
+}
+
+.dropdown.active+a,
+a:hover {
+    /* *****check this out */
+    color: #082b03;
+}
+
+
+/* || LAYOUT */
+
+header {
+    display: flex;
+    border-bottom: #148f04 solid 1px;
+}
+
+.fixed-top {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    border: grey 5px;
+    border-radius: 0.5rem;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px 0 black;
+    min-width: 300px;
+}
+
+@media (min-width: 600px) {
+    .page {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+/* ********************************************* */
+
+
+/* || HEADER */
+
+header {
+    background: #f0f8e2;
+    /* padding: 15px; */
+    margin: 0;
+}
+
+header .brand {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+    font-size: 28px;
+    /* line-height: 1; */
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+header #titles {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+
+/*  */
+
+.desktop-menu {
+    padding-top: 15px;
+    display: none;
+}
+
+.desktop-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 4px;
+}
+
+.desktop-menu ul li {
+    padding: 0 0.4rem;
+}
+
+
+/* dropdown menu icon */
+
+.dropdown-icon {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 72px;
+    height: 16px;
+    background-color: #082b03;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-24px, 24px);
+    transform: rotate(-45deg) translate(-24px, 24px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+/* navigation drop-down menu */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: fixed;
+    left: 20px;
+    bottom: 160px;
+    background-color: white;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px 0 black;
+    width: 50vw;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown-menu ul li {
+    padding-top: 2rem;
+}
+
+.clicked {
+    opacity: 0.9;
+    transform: translateY(-10px);
+    pointer-events: auto;
+}
+
+@media (min-width: 600px) {
+    .dropdown-icon {
+        display: none;
+    }
+    .dropdown-menu {
+        display: none;
+    }
+}
+
+
+/* social media icons */
+
+i {
+    margin-right: 1rem;
+}
+
+@media (min-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-evenly;
+        min-width: 850px;
+    }
+    .dropdown {
+        display: none;
+    }
+    .desktop-menu {
+        display: flex;
+    }
+    .desktop-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+/* *********************************************** */
+
+
+/* || BODY */
+
+
+/* wor with me container */
+
+.work-with-me-container .form {
+    margin-bottom: 30px;
+}
+
+form {
+    width: 100%;
+    margin: 0 0;
+    text-align: center;
+}
+
+button {
+    background-color: #f0f8e2;
+    padding: 8px 12px;
+    margin: 4px 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: #148f04;
+    color: white;
+    font-weight: 500;
+}
+
+form textarea,
+form input {
+    border: 0;
+    border-bottom: 2px solid grey;
+    margin: .5rem auto;
+    width: 90%;
+    background-color: #f0f8e2;
+}
+
+.quick-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    /* margin: 0.6rem;
+    height: 2rem;
+    min-width: 4.5rem; */
+}
+
+
+/* about me page - about me container */
+
+@media (min-width: 600px) {
+    .about-me-container {
+        flex-direction: column;
+        width: 70%;
+    }
+    .work-with-me-container {
+        width: 30%;
+    }
+}
+
+
+/* Contact me / contact details */
+
+.contact-details {
+    justify-content: space-around;
+}
+
+
+/* Lets connect */
+
+.socials {
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.socials-headline {
+    flex: 0 0 100%;
+}
+
+
+/* ************************************************* */
+
+
+/* || FOOTER */
+
+footer {
+    background: #f0f8e2;
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 3px;
+}
+
+footer h4 {
+    font-weight: 700;
+}
+
+footer p {
+    color: rgb(99, 99, 94);
+}
