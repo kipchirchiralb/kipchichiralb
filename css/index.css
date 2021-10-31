@@ -266,7 +266,7 @@ i {
 /* || BODY */
 
 
-/* wor with me container */
+/* work with me container */
 
 .work-with-me-container .form {
     margin-bottom: 30px;
@@ -284,6 +284,7 @@ button {
     margin: 4px 8px;
     cursor: pointer;
     transition: all 0.3s;
+    align-items: center;
 }
 
 button:hover {
@@ -309,6 +310,13 @@ form input {
     /* margin: 0.6rem;
     height: 2rem;
     min-width: 4.5rem; */
+}
+
+@media (min-width: 600px){
+    #sms-me,
+    #call-me{
+        display: none;
+    }
 }
 
 
