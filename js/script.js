@@ -3,6 +3,7 @@ let dropdownBtn = document.querySelector(".dropdown-icon");
 dropdownBtn.addEventListener("click", showDropdownMenu);
 let counter = 1;
 
+
 function showDropdownMenu() {
     counter++;
     if (counter % 2 == 0) {
@@ -17,18 +18,8 @@ function showDropdownMenu() {
 }
 
 
-// Quick action buttons
-const callMeBtn = document.getElementById("call-me")
-const sendMessageBtn = document.getElementById("sms-me")
-const emailMeBtn = document.getElementById("email-me")
+//OFFER - Saturdays and sundays . Free IT and POULTRY FARMING consultations
 
-callMeBtn.addEventListener("click", function() {
-    document.location.href = "tel:+254717481718"
-})
+let d = new Date()
 
-sendMessageBtn.addEventListener("click", function() {
-    document.location.href = "sms:+254717481718"
-})
-emailMeBtn.addEventListener("click", function() {
-    document.location.href = "mailto:albertkipchirchir02@gmail.com"
-})
+console.log(d.getDay)
