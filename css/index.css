@@ -307,14 +307,13 @@ form input {
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
-    /* margin: 0.6rem;
-    height: 2rem;
-    min-width: 4.5rem; */
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-@media (min-width: 600px){
+@media (min-width: 600px) {
     #sms-me,
-    #call-me{
+    #call-me {
         display: none;
     }
 }
